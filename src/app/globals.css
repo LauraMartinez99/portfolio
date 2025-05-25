@@ -1,8 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base colors */
+  --foreground-rgb: 17, 24, 39;  /* Dark gray for text */
+  --background-rgb: 255, 255, 255;  /* White background */
+
+  /* Custom Color Palette - OKLCH with improved contrast */
+  --primary-color: oklch(45.08% 0.266 282.73);  /* Deep purple */
+  --primary-light: oklch(55.08% 0.266 282.73);  /* Lighter purple for hover states */
+  --secondary-color: oklch(50.33% 0.235 263.88);  /* Deeper blue */
+  --secondary-light: oklch(60.33% 0.235 263.88);  /* Lighter blue for hover states */
+  --accent1-color: oklch(30.1% 0.09 229.9);  /* Darker accent for better contrast */
+  --accent2-color: oklch(40.28% 0.031 200.12);  /* Darker accent for better contrast */
+  
+  /* Navbar specific color */
+  --navbar-bg: oklch(45.08% 0.266 282.73);  /* #5409DA in OKLCH */
+  
+  /* Text colors */
+  --text-primary: oklch(20% 0 0);  /* Almost black for primary text */
+  --text-secondary: oklch(40% 0 0);  /* Dark gray for secondary text */
+  --text-light: oklch(100% 0 0);  /* White for text on dark backgrounds */
+
+  /* Background colors */
+  --bg-primary: oklch(100% 0 0);  /* White */
+  --bg-secondary: oklch(95% 0 0);  /* Light gray */
+  --bg-accent: oklch(90% 0 0);  /* Slightly darker gray */
+
+  /* Typography */
+  --font-body: 'Nunito Sans', sans-serif;
 }
 
 @theme inline {
@@ -14,13 +41,34 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 17, 24, 39;
+    
+    /* Dark mode text colors */
+    --text-primary: oklch(100% 0 0);  /* White */
+    --text-secondary: oklch(80% 0 0);  /* Light gray */
+    --text-light: oklch(100% 0 0);  /* White */
+    
+    /* Dark mode background colors */
+    --bg-primary: oklch(20% 0 0);  /* Dark gray */
+    --bg-secondary: oklch(25% 0 0);  /* Slightly lighter dark gray */
+    --bg-accent: oklch(30% 0 0);  /* Even lighter dark gray */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  font-family: var(--font-body);
 }
+
+/* Utility classes for text colors */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-light { color: var(--text-light); }
+
+/* Utility classes for background colors */
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-accent { background-color: var(--bg-accent); }
+.bg-navbar { background-color: var(--navbar-bg); }
