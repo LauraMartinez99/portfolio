@@ -4,17 +4,16 @@ import React, { useEffect, useState } from 'react';
 import Lottie from 'lottie-react';
 import animationData from '../../public/animations/hero-animation.json';
 
+const titles = [
+  "Ingeniera Biomédica",
+  "Ingeniera Electrónica",
+  "Desarrolladora de Software"
+] as const;
+
 const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(100);
-
-  const titles = [
-    "Ingeniera Biomédica",
-    "Ingeniera Electrónica",
-    "Desarrolladora de Software"
-  ];
 
   useEffect(() => {
     const currentText = titles[currentTitle];
