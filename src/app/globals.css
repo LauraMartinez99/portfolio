@@ -30,6 +30,12 @@
 
   /* Typography */
   --font-body: 'Nunito Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Animation durations */
+  --transition-fast: 200ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
 }
 
 @theme inline {
@@ -72,3 +78,195 @@ body {
 .bg-secondary { background-color: var(--bg-secondary); }
 .bg-accent { background-color: var(--bg-accent); }
 .bg-navbar { background-color: var(--navbar-bg); }
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-5deg) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes textRotate {
+  0%, 20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25%, 45% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50%, 70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75%, 95% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textRotateSlow {
+  0%, 25% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  30%, 45% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  50%, 75% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80%, 95% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes textRotateSmooth {
+  0%, 20% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  25%, 30% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  35%, 55% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  60%, 65% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  70%, 90% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  95%, 100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal) ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn var(--transition-normal) ease-out forwards;
+}
+
+.animate-rotate-in {
+  animation: rotateIn var(--transition-normal) ease-out forwards;
+}
+
+.animate-text-rotate {
+  animation: textRotate 9s infinite;
+}
+
+.animate-text-rotate-slow {
+  animation: textRotateSlow 15s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-text-rotate-smooth {
+  animation: textRotateSmooth 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+  color: var(--primary-color);
+}
+
+/* Transition Classes */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-normal);
+}
+
+.transition-fast {
+  transition-duration: var(--transition-fast);
+}
+
+.transition-slow {
+  transition-duration: var(--transition-slow);
+}
+
+/* Hero Section Specific Styles */
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-family: var(--font-mono);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.4;
+}
+
+.highlight-box {
+  position: relative;
+  background-color: var(--secondary-color);
+  opacity: 0.1;
+  border-radius: 0.5rem;
+  transform: rotate(-1deg);
+}
+
+.highlight-box-content {
+  position: relative;
+  z-index: 1;
+  background-color: var(--secondary-color);
+  opacity: 0.1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}

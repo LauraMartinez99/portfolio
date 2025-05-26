@@ -1,21 +1,14 @@
 import React from 'react';
-import Image from "next/image";
 import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-16">
-        {/* Hero Section */}
-        <section id="hero" className="py-20 bg-bg-primary">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4 text-text-primary">Hero Section</h1>
-            <p className="text-text-secondary">Dynamic headline and intro paragraph will go here.</p>
-            <button className="mt-4 px-6 py-2 bg-primary-color text-text-light rounded hover:bg-primary-light transition-colors">Contactarme</button>
-          </div>
-        </section>
-
+      <main className="min-h-screen">
+        <Hero />
+        
         {/* About Me Section */}
         <section id="about" className="py-20 bg-bg-secondary">
           <div className="container mx-auto px-4">
