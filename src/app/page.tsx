@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import AboutMe from '@/components/AboutMe';
+import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
@@ -8,15 +10,9 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen">
         <Hero />
+        <AboutMe />
+        <Projects />
         
-        {/* About Me Section */}
-        <section id="about" className="py-20 bg-bg-secondary">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-4 text-text-primary">About Me</h2>
-            <p className="text-text-secondary">Professional profile and skills will go here.</p>
-          </div>
-        </section>
-
         {/* Projects Section */}
         <section id="projects" className="py-20 bg-bg-primary">
           <div className="container mx-auto px-4">
