@@ -37,12 +37,6 @@ const Navbar = () => {
               <Link href="#certifications" className="text-text-light hover:text-accent2-color px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Certificaciones
               </Link>
-              <Link href="#experience" className="text-text-light hover:text-accent2-color px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Experiencia
-              </Link>
-              <Link href="#contact" className="text-text-light hover:text-accent2-color px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Contacto
-              </Link>
             </div>
           </div>
 
@@ -74,12 +68,6 @@ const Navbar = () => {
             </Link>
             <Link href="#certifications" className="block text-text-light hover:text-accent2-color px-3 py-2 rounded-md text-base font-medium transition-colors">
               Certificaciones
-            </Link>
-            <Link href="#experience" className="block text-text-light hover:text-accent2-color px-3 py-2 rounded-md text-base font-medium transition-colors">
-              Experiencia
-            </Link>
-            <Link href="#contact" className="block text-text-light hover:text-accent2-color px-3 py-2 rounded-md text-base font-medium transition-colors">
-              Contacto
             </Link>
           </div>
         </div>
