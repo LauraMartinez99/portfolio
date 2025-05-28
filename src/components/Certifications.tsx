@@ -23,6 +23,10 @@ const certifications = [
   {
     title: "Curso Definitivo de HTML y CSS",
     imageUrl: "/images/certifications/Curso Definitivo de HTML y CSS.jpg"
+  },
+  {
+    title: "Curso de React.js",
+    imageUrl: "/images/certifications/Curso de Reactjs.jpg"
   }
 ];
 
