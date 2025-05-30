@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col h-full">
       <div className="relative h-48 w-full">
         <Image
           src={imageUrl}
@@ -38,9 +38,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
       </div>
       
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
+        <p className="text-gray-600 mb-4 line-clamp-3">{description}</p>
         
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-gray-700 mb-2">Tecnologías:</h4>
@@ -56,69 +56,74 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
 
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-2"
-        >
-          {isExpanded ? 'Ver menos' : 'Ver más detalles'}
-          <svg
-            className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
+        <div className="mt-auto">
+          <div className="flex items-center justify-between gap-4">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-2"
+            >
+              {isExpanded ? 'Ver menos' : 'Ver más detalles'}
+              <svg
+                className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
 
-        {isExpanded && (
-          <div className="mt-4 space-y-4">
-            <div>
-              <h4 className="text-sm font-semibold text-gray-700 mb-2">Rol:</h4>
-              <p className="text-gray-600">{role}</p>
-            </div>
-            
-            <div>
-              <h4 className="text-sm font-semibold text-gray-700 mb-2">Resultados:</h4>
-              <ul className="list-disc list-inside space-y-1">
-                {outcomes.map((outcome, index) => (
-                  <li key={index} className="text-gray-600">{outcome}</li>
-                ))}
-              </ul>
-            </div>
+            {demoUrl && (
+              <a
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                aria-label={`Ver demo de ${title}`}
+              >
+                <ExternalLink size={16} />
+                <span>Demo</span>
+              </a>
+            )}
           </div>
-        )}
 
-        {/* Links */}
-        <div className="flex gap-4 pt-4">
-          {githubUrl && (
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-              aria-label={`Ver código de ${title} en GitHub`}
-            >
-              <Github size={20} />
-              <span>Código</span>
-            </a>
+          {isExpanded && (
+            <div className="mt-4 space-y-4">
+              <div>
+                <h4 className="text-sm font-semibold text-gray-700 mb-2">Rol:</h4>
+                <p className="text-gray-600">{role}</p>
+              </div>
+              
+              <div>
+                <h4 className="text-sm font-semibold text-gray-700 mb-2">Resultados:</h4>
+                <ul className="list-disc list-inside space-y-1">
+                  {outcomes.map((outcome, index) => (
+                    <li key={index} className="text-gray-600">{outcome}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           )}
-          {demoUrl && (
-            <a
-              href={demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-              aria-label={`Ver demo de ${title}`}
-            >
-              <ExternalLink size={20} />
-              <span>Demo</span>
-            </a>
+
+          {/* GitHub Link */}
+          {githubUrl && (
+            <div className="flex gap-4 pt-4">
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+                aria-label={`Ver código de ${title} en GitHub`}
+              >
+                <Github size={20} />
+                <span>Código</span>
+              </a>
+            </div>
           )}
         </div>
       </div>

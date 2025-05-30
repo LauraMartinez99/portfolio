@@ -5,6 +5,20 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
   {
+    title: "Marketplace - Next.js Learning Project",
+    description: "Un marketplace moderno de e-commerce construido con Next.js 15, TypeScript y Tailwind CSS. Este proyecto fue desarrollado como un ejercicio de aprendizaje para explorar tecnologías modernas de desarrollo web y mejores prácticas.",
+    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS",  "Fake Store API"],
+    imageUrl: "/images/projects/marketplace.jpg",
+    role: "Desarrolladora full-stack",
+    outcomes: [
+      "Implementación de funcionalidades de e-commerce completas",
+      "Integración con API externa para datos de productos",
+      "Gestión de estado con Zustand",
+      "Diseño responsive y UI moderna"
+    ],
+    demoUrl: "https://marketplace-laurafma.vercel.app/"
+  },
+  {
     title: "Programas Interactivos Unity para Rehabilitación de Adultos Mayores",
     description: "Desarrollo de aplicaciones interactivas en Unity para la rehabilitación física y cognitiva de adultos mayores, enfocadas en mejorar la movilidad y coordinación.",
     technologies: ["Unity", "C#", "Diseño de Interfaces"],
