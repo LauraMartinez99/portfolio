@@ -19,6 +19,20 @@ const projects = [
     demoUrl: "https://marketplace-laurafma.vercel.app/"
   },
   {
+    title: "Restaurant Landing Page",
+    description: "Una interfaz moderna de menú de restaurante construida con Next.js 15, TypeScript y Tailwind CSS. Este proyecto demuestra la implementación de conceptos modernos de desarrollo web y mejores prácticas de UI/UX.",
+    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "TheMealDB API"],
+    imageUrl: "/images/projects/restaurant.jpg",
+    role: "Desarrolladora frontend",
+    outcomes: [
+      "Implementación de filtrado de categorías y búsqueda en tiempo real",
+      "Integración con TheMealDB API para datos de comidas",
+      "Diseño responsive y UI moderna con shadcn/ui",
+      "Optimización de rendimiento y estados de carga"
+    ],
+    demoUrl: "https://restaurant-landing-ten.vercel.app"
+  },
+  {
     title: "Programas Interactivos Unity para Rehabilitación de Adultos Mayores",
     description: "Desarrollo de aplicaciones interactivas en Unity para la rehabilitación física y cognitiva de adultos mayores, enfocadas en mejorar la movilidad y coordinación.",
     technologies: ["Unity", "C#", "Diseño de Interfaces"],
