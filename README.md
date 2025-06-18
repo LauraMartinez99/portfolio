@@ -11,8 +11,7 @@ A modern, responsive personal portfolio website built with Next.js 15, showcasin
 - **Styling**: Tailwind CSS
 - **UI Components**: Shadcn UI
 - **Icons**: Lucide Icons
-- **Animations**: Framer Motion (Optional)
-- **Form Handling**: React Hook Form with Zod validation
+- **Animations**: Framer Motion
 
 ## 🚀 Features
 
