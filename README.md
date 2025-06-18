@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+[✨ Live Demo](https://portfolio-laurafma.vercel.app)
 
-First, run the development server:
+A modern, responsive personal portfolio website built with Next.js 15, showcasing my experience as a Biomedical and Electronic Engineer with a focus on software development and hardware integration.
 
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn UI
+- **Icons**: Lucide Icons
+- **Animations**: Framer Motion (Optional)
+- **Form Handling**: React Hook Form with Zod validation
+
+## 🚀 Features
+
+- Modern and clean design with smooth animations
+- Responsive layout that works on all devices
+- Dynamic content sections:
+  - Hero section with rotating professional titles
+  - About Me with skills and education
+  - Projects showcase with detailed cards
+  - Certifications display
+  - Contact section
+- Optimized performance and SEO
+- Type-safe development with TypeScript
+- Beautiful UI components with Tailwind CSS
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## 🎯 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+portfolio/
+├── src/
+│   ├── app/              # Next.js app directory
+│   ├── components/       # React components
+│   ├── lib/             # Utility functions
+│   └── types/           # TypeScript types
+├── public/              # Static assets
+│   ├── images/         # Project images
+│   └── animations/     # Lottie animations
+└── ...config files
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Design Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Color Palette
+- Primary: #5409DA
+- Secondary: #4E71FF
+- Accent1: #8DD8FF
+- Accent2: #BBFBFF
 
-## Deploy on Vercel
+### Typography
+- Font Family: Nunito Sans
+- Responsive text sizing for all breakpoints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Responsive Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The website is fully responsive with breakpoints for:
+- Mobile (single column)
+- Tablet (adjusted spacing)
+- Desktop (multi-column layouts)
+
+## 🔍 SEO Optimization
+
+- Dynamic page titles and meta descriptions
+- Proper semantic HTML structure
+- Optimized images and assets
+- Sitemap and robots.txt configuration
+
+## 🚀 Performance
+
+- Optimized images using Next.js Image component
+- Lazy loading for below-the-fold content
+- Minified CSS and JavaScript
+- Efficient code splitting
+
+## 👩‍💻 Author
+
+Laura Martínez
+- Email: ing.lauramartinez25@gmail.com
+- LinkedIn: [Your LinkedIn Profile]
+- GitHub: [Your GitHub Profile]
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Shadcn UI for the beautiful components
+- All contributors and supporters
