@@ -5,6 +5,20 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
   {
+    title: "Mini Pokédex",
+    description: "Una aplicación moderna de Pokédex construida con Next.js 15, diseñada para ayudar a los desarrolladores a aprender y practicar conceptos modernos de desarrollo web. Incluye una interfaz hermosa para explorar Pokémon, información detallada de cada uno, y diseño responsivo.",
+    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Shadcn UI", "PokéAPI"],
+    imageUrl: "/images/projects/pokedex.jpg",
+    role: "Desarrolladora full-stack",
+    outcomes: [
+      "Implementación de UI moderna con Shadcn UI",
+      "Integración con PokéAPI para datos en tiempo real",
+      "Diseño responsivo y optimizado para todos los dispositivos",
+      "Desarrollo type-safe con TypeScript"
+    ],
+    demoUrl: "https://mini-pokedex-kohl.vercel.app"
+  },
+  {
     title: "Marketplace - Next.js Learning Project",
     description: "Un marketplace moderno de e-commerce construido con Next.js 15, TypeScript y Tailwind CSS. Este proyecto fue desarrollado como un ejercicio de aprendizaje para explorar tecnologías modernas de desarrollo web y mejores prácticas.",
     technologies: ["Next.js 15", "TypeScript", "Tailwind CSS",  "Fake Store API"],
